@@ -7,7 +7,13 @@ const countries = require('./countries.json');
  * @returns {array}
  */
 function getCountryNameByIso3(isoCode){
-    //complete with your code
+    let ans="";
+    for(let i=0;i<countries.length;i++){
+        if(countries[i].iso3===isoCode){
+            ans=countries[i].name;
+        }
+    }
+    return ans;
 }
 
 /**
