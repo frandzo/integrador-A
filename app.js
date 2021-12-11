@@ -34,7 +34,21 @@ function getCountryNameByIso3(isoCode){
  * @returns {Object}
  */
 function getCountrySummary(isoCode){
-    //complete with your code
+  let ans={};
+  for(let i=0;i<countries.length;i++){
+      if(countries[i].iso3===isoCode){
+          ans={name:countries[i].name,
+              iso3:countries[i].iso3,
+              iso2:countries[i].iso2,
+              phone_code:countries[i].phone_code,
+              capital:countries[i].capital,
+              currency:countries[i].currency,
+              tld:countries[i].tld,
+              region:countries[i].region,
+              emoji:countries[i].emoji};
+      }
+  }
+  return ans;
 }
 
 function main() {
